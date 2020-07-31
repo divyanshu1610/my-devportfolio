@@ -149,7 +149,7 @@ const CONTACT_DATA = {
 };
 
 const SELECTED_THEME = themes.orangeTheme;
-const REPO_NAME = '';
+const REPO_NAME = 'my-devportfolio';
 
 module.exports = {
   LANDING_DATA,
