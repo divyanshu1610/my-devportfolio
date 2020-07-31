@@ -11,7 +11,7 @@ const Landing = () => {
   const { theme } = useContext(ThemeContext);
   return (
     <React.Fragment>
-      <div style={{background: `url('${REPO_NAME}/assets/lead-bg.jpg')`}} id="lead">
+      <div style={{background: `url('/assets/lead-bg.jpg')`}} id="lead">
         <div id="lead-content">
           <h1>{name}</h1>
           <h2 style={{color: theme.imageHighlight, marginTop: '1rem'}}><ReactRotatingText items={rotateTextItems} /></h2>
