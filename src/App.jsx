@@ -36,9 +36,6 @@ function App() {
       <ThemeContext.Provider value={{theme: state.theme , setTheme: setNewTheme}}>
       <Header />
         <Switch>
-          <Route exact path="/">
-            <Landing />
-          </Route>
           {/* <Route path="/about">
             <About />
           </Route> */}
@@ -56,6 +53,9 @@ function App() {
           </Route>
           <Route path="/contact">
             <Contact />
+          </Route>
+          <Route path="/">
+            <Landing />
           </Route>
         </Switch>
         <ThemeChooser currentTheme={state.theme} themes={state.allThemes} />
