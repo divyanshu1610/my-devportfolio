@@ -4,6 +4,7 @@ import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 
 
+import { REPO_NAME } from '../data/userData';
 import { ThemeContext } from "../theme-context";
 
 const Header = () => {
@@ -17,7 +18,7 @@ const Header = () => {
             exact
             activeStyle={{ background: theme.highlight }}
             style={{ color: theme.text }}
-            to="/"
+            to={`/${REPO_NAME}`}
           >
             <i className="fa fa-home"></i>
           </NavLink>

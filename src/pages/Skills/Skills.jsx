@@ -6,7 +6,7 @@ import { ThemeContext } from "../../theme-context";
 
 import SkillsImg from "./SkillsImg";
 
-import { SKILLS_DATA } from "../../data/userData";
+import { SKILLS_DATA, REPO_NAME } from "../../data/userData";
 import "./Skills.css";
 
 const Skills = () => {
@@ -17,7 +17,7 @@ const Skills = () => {
     return (
       <Tada key={name}>
         <li className="skill-icon">
-          <img src={`assets/${image}`} alt="..." />
+          <img src={`${REPO_NAME}/assets/${image}`} alt="..." />
           <p style={{ color: theme.text }} className="skill-name">
             {name}
           </p>

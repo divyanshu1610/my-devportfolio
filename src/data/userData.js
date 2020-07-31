@@ -149,6 +149,7 @@ const CONTACT_DATA = {
 };
 
 const SELECTED_THEME = themes.orangeTheme;
+const REPO_NAME = '';
 
 module.exports = {
   LANDING_DATA,
@@ -158,4 +159,5 @@ module.exports = {
   SKILLS_DATA,
   CONTACT_DATA,
   SELECTED_THEME,
+  REPO_NAME,
 };

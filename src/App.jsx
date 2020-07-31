@@ -14,7 +14,7 @@ import ThemeChooser from './components/ThemeChooser';
 
 import { themes, ThemeContext } from "./theme-context";
 
-import { SELECTED_THEME } from './data/userData';
+import { SELECTED_THEME, REPO_NAME } from './data/userData';
 
 function App() {
 
