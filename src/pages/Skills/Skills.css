@@ -1,0 +1,152 @@
+.basic-skills {
+ 
+    margin-left: 10%;
+    margin-right: 5%;
+    margin-top: 5%;
+}
+
+
+.skills-main-div {
+    display: flex;
+  }
+  
+  .skills-header {
+    font-size: 60px;
+    line-height: 1.1;
+    font-family: "Roboto Medium", sans-serif;
+    text-align: center;
+  }
+  
+  .skills-text {
+    font-size: 20px;
+  }
+  
+  .skills-text-div {
+    margin-left: 50px;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  
+  .skills-main-div > * {
+    flex: 1;
+    margin-bottom: 30px;
+  }
+  
+  .skills-image-div > * {
+    max-width: 100%;
+    height: auto;
+    margin-top: 100px;
+  }
+  
+  
+  /* Media Query */
+  @media (max-width: 1380px) {
+    .skills-heading {
+      font-size: 40px;
+    }
+    .skills-header {
+      font-size: 50px;
+    }
+    /* .skills-image-div > img {
+      margin-top: 0px;
+    } */
+  }
+  @media (max-width: 768px) {
+    .skills-heading {
+      font-size: 30px;
+      text-align: center;
+    }
+    .skills-header {
+      font-size: 30px;
+    }
+    .greeting-text-p {
+      font-size: 16px;
+      line-height: normal;
+    }
+    .skills-main-div {
+      flex-direction: column;
+    }
+    .skills-text-div {
+      margin-left: 0px;
+      margin: 20px;
+    }
+    .skills-text {
+      font-size: 16px;
+    }
+    .skills-text-subtitle {
+      font-size: 16px;
+      text-align: center;
+    }
+    .skills-image-div {
+      /* display: none; */
+      order: 2;
+    }
+    .skills-image-div > * {
+      margin-top: 0px;
+    }
+  }
+  
+
+  .skill-icons {
+    width: 100%;
+    position: relative;
+    list-style-type: none
+}
+
+.skill-icons .skill-name {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #1a535c
+}
+
+@media (max-width: 37.5em) {
+    .skill-icons .skill-name {
+        font-size:1.5rem
+    }
+}
+
+.skill-icons .skill-icon {
+    display: inline-block;
+    list-style-type: none;
+    width: 19%;
+    position: relative;
+    margin-bottom: 1.5rem
+}
+
+.skill-icons .skill-icon img {
+    width: 60%;
+    position: relative;
+    display: block;
+    margin: 0 auto
+}
+
+@media (max-width: 56.25em) {
+    .skill-icons .skill-icon img {
+        width:60%
+    }
+}
+
+@media (max-width: 37.5em) {
+    .skill-icons .skill-icon img {
+        width:70%
+    }
+}
+
+@media (max-width: 56.25em) {
+    .skill-icons .skill-icon {
+        width:24%;
+        margin-bottom: 1.5rem
+    }
+}
+
+@media (max-width: 37.5em) {
+    .skill-icons .skill-icon {
+        width:32%;
+        margin-bottom: .5rem
+    }
+}
+
+.skill-icons:not(:last-child) {
+    margin-bottom: 2rem
+}
