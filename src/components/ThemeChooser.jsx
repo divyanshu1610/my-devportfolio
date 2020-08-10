@@ -11,7 +11,7 @@ const ThemeChooser = ({ currentTheme, themes }) => {
         zIndex: 999,
     }} >
       <Planet
-        centerContent={<ColorButton theme={currentTheme} />}
+        centerContent={<ColorButton theme={currentTheme} icon={true}/>}
         autoClose
         hideOrbit
         orbitRadius={50}

@@ -1,17 +1,18 @@
-import React, { useContext } from "react";
-
+import React, { useContext, useState } from "react";
 
 import { NavLink } from "react-router-dom";
 
-
-import { REPO_NAME } from '../data/userData';
+import { REPO_NAME } from "../data/userData";
 import { ThemeContext } from "../theme-context";
 
-const Header = () => {
+const Header = ({ toggle , setToggle }) => {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <header>
+    <header className={ toggle ? "active" : " "}>
+      <div onClick={() => setToggle(false)} style={{color: theme.text}} id="mobile-menu-close">
+          <i className="fa fa-times" aria-hidden="true"></i>
+        </div>
       <ul id="menu" className="shadow">
         <li>
           <NavLink

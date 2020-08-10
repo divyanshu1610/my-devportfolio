@@ -2,6 +2,7 @@ const { themes } = require('../theme-context');
 // ----- Landing Page ----- //
 const LANDING_DATA = {
   name: "Divyanshu Maurya",
+  bgImage: "lead-bg.jpg",
   rotateTextItems: ["Developer", "Problem Solver", "Learner"],
 };
 

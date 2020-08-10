@@ -150,9 +150,9 @@ header {
   position: fixed;
   right: 15px;
   top: 10px;
-  color: $base-color;
+  // color: $base-color;
   font-size: 1.5em;
-  z-index: 20;
+  z-index: 1000;
   padding: 0 7px;
   border-radius: 4px;
   background: $background;
@@ -167,7 +167,7 @@ header {
   padding-right: 15px;
   padding-top: 10px;
   cursor: pointer;
-  color: $base-color;
+  // color: $base-color;
 
   span {
     font-size: 0.5em;
@@ -232,7 +232,7 @@ footer {
   height: 100vh;
   min-height: 500px;
   max-height: 1080px;
-  // background: url(/assets/lead-bg.jpg);
+  // background: url(/my-devportfolio/assets/lead-bg.jpg);
   background-size: cover;
   padding: 15px;
   overflow: hidden;
@@ -459,6 +459,8 @@ footer {
   }
 }
 
+
+
 /*
     -----------------------------
     ----- 12. Media Queries -----
@@ -527,6 +529,7 @@ footer {
 
 // Small Devices
 @media only screen and (max-width: 768px) {
+
   header {
     position: fixed;
     display: none;
@@ -536,8 +539,8 @@ footer {
     height: 100%;
   }
 
-  #mobile-menu-open,
-  #mobile-menu-close {
+
+  #mobile-menu-open, #mobile-menu-close {
     display: block;
   }
 

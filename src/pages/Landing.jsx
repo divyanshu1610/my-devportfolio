@@ -2,18 +2,18 @@ import React, {useContext } from "react";
 import ReactRotatingText from 'react-rotating-text';
 import Footer from "../components/Footer";
 
-import { LANDING_DATA } from '../data/userData';
-
-import landingImg from '../data/lead-bg.jpg';
-
+import { LANDING_DATA, REPO_NAME } from '../data/userData';
 import  { ThemeContext } from '../theme-context';
 
 const Landing = () => {
-  const { name, rotateTextItems } = LANDING_DATA;
+  const { name, rotateTextItems, bgImage } = LANDING_DATA;
   const { theme } = useContext(ThemeContext);
+
+  const bgImgPath = `url(/${REPO_NAME}/assets/${bgImage})`;
+
   return (
     <React.Fragment>
-      <div style={{background: landingImg }} id="lead">
+      <div style={{ background: bgImgPath }} id="lead">
         <div id="lead-content">
           <h1>{name}</h1>
           <h2 style={{color: theme.imageHighlight, marginTop: '1rem'}}><ReactRotatingText items={rotateTextItems} /></h2>

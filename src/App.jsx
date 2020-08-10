@@ -10,31 +10,50 @@ import Project from "./pages/Project/Project";
 import Skills from "./pages/Skills/Skills";
 import Contact from "./pages/Contact/Contact";
 
-import ThemeChooser from './components/ThemeChooser';
+import ThemeChooser from "./components/ThemeChooser";
 
 import { themes, ThemeContext } from "./theme-context";
 
-import { SELECTED_THEME, REPO_NAME } from './data/userData';
+import { SELECTED_THEME, REPO_NAME } from "./data/userData";
 
 function App() {
+  const THEMES = [
+    themes.purpleTheme,
+    themes.orangeTheme,
+    themes.pinkTheme,
+    themes.blueTheme,
+  ];
+  const initialThemes = THEMES.filter((t) => t.text !== SELECTED_THEME.text);
 
-  const THEMES = [ themes.purpleTheme, themes.orangeTheme, themes.pinkTheme, themes.blueTheme];
-  const initialThemes = THEMES.filter(t => t.text !== SELECTED_THEME.text);
+  const [state, setState] = useState({
+    theme: SELECTED_THEME,
+    allThemes: initialThemes,
+    toggle: false,
+  });
 
-  const [state, setState] = useState({theme: SELECTED_THEME, allThemes: initialThemes });
-  
   const setNewTheme = (theme) => {
-    const newThemes = THEMES.filter(t => t.text !== theme.text);
+    const newThemes = THEMES.filter((t) => t.text !== theme.text);
     setState({
+      ...state,
       theme,
       allThemes: newThemes,
     });
-  }
+  };
 
   return (
     <Router>
-      <ThemeContext.Provider value={{theme: state.theme , setTheme: setNewTheme}}>
-      <Header />
+      <ThemeContext.Provider
+        value={{ theme: state.theme, setTheme: setNewTheme }}
+      >
+       {!state.toggle && <div
+          onClick={() => setState({ ...state, toggle: true })}
+          id="mobile-menu-open"
+          style={{color: state.theme.text}}
+          className="shadow-large"
+        >
+          <i className="fa fa-bars" aria-hidden="true"></i>
+        </div>}
+        <Header toggle={state.toggle} setToggle={val => setState({...state, toggle: val})}/>
         <Switch>
           {/* <Route path="/about">
             <About />
