@@ -17,15 +17,17 @@ const EXPERIENCE_DATA = {
   timelineIcon: "fa-map-marker",
   experiences: [
     {
-      employerName: "American Express",
+      employerName: "Name of the Employer",
       jobTitle: "Internship",
       timeline: "June 2020 - July 2020",
-      description: `Worked on the integration of different microservices for transactions
-                    and a user interface using the OneApp framework.`,
-    },
-
+      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                          Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut
+                          tortor nec nulla commodo malesuada sit amet vel lacus. Fusce
+                          eget efficitur libero. Morbi dapibus porta quam laoreet
+                          placerat.`,
+    }, // Repeat this in case of multiple experiences
     // {
-    //   employerName: "American Express",
+    //   employerName: "Name of the Employer",
     //   jobTitle: "Internship",
     //   timeline: "June 2020 - July 2020",
     //   description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -69,14 +71,14 @@ const EDUCATION_DATA = {
     },
   ],
 
-
+  // In case of no certificate leave it empty otherwise uncomment and repeat in case of multiple.
   certificates: [
-    {
-      title: "Getting Started with Go",
-      description: "University of California, Irvine",
-      image: "go_certi.jpg",
-      link: "https://coursera.org/share/9b990545979b1dfaf3435577fd399311",
-    },
+    // {
+    //   title: "Getting Started with Go",
+    //   description: "University of California, Irvine",
+    //   image: "go_certi.jpg",
+    //   link: "https://coursera.org/share/9b990545979b1dfaf3435577fd399311",
+    // },
   ]
 };
 
