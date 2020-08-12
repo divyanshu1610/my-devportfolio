@@ -3,23 +3,28 @@ import Fade from "react-reveal";
 
 import EducationImg from "./EducationImg";
 
-import { EDUCATION_DATA } from "../../data/userData";
+import { EDUCATION_DATA, REPO_NAME } from "../../data/userData";
 import { ThemeContext } from "../../theme-context";
 
 import "./Education.css";
 
-
 const Education = () => {
-  const { educations, certificates, headerText, subText, secondaryText } = EDUCATION_DATA;
+  const {
+    educations,
+    certificates,
+    headerText,
+    subText,
+    secondaryText,
+  } = EDUCATION_DATA;
   const { theme } = useContext(ThemeContext);
   // education items
   let left = false;
   const eduItems = educations.map((edu) => {
     const { instituteName, course, description, duration, location } = edu;
     left = !left;
-    return (  
-      <Fade key={instituteName+course} left={left} right={!left}>
-        <div className="card mt-2">
+    return (
+      <Fade key={instituteName + course} left={left} right={!left}>
+        <div className="card m-2">
           <div className="card-body">
             <h5
               className="card-title"
@@ -30,6 +35,32 @@ const Education = () => {
           </div>
         </div>
       </Fade>
+    );
+  });
+
+  const certiItems = certificates.map((certi) => {
+    const { image, link, title, description } = certi;
+
+    return (
+      <div key={title} className="card" style={{ width: "18rem;" }}>
+        <img
+          alt="..."
+          className="card-img-top"
+          src={`${REPO_NAME}/assets/${image}`}
+        />
+
+        <div className="card-body">
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href={link}
+            className="card-title"
+          >
+            {title}
+          </a>
+          <p className="card-text">{description}</p>
+        </div>
+      </div>
     );
   });
 
@@ -51,10 +82,15 @@ const Education = () => {
             </div>
           </div>
         </Fade>
-        <div className="background-alt m-auto w-50">
-          {/* <h2 className="heading">Degrees</h2> */}
+        <div className="background-alt container p-1">
+          <h2 className="heading p-1">Degrees</h2>
           {eduItems}
-          {/* <h2 className="heading">Certificates</h2> */}
+          {certificates.length > 0 && (
+            <React.Fragment>
+              <h2 className="heading p-2 ">Certificates</h2>
+              <div className="card-columns m-auto mt-0 pt-0">{certiItems}</div>
+            </React.Fragment>
+          )}
         </div>
       </div>
     </React.Fragment>

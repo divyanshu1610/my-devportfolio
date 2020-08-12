@@ -40,6 +40,10 @@
   text-align: center;
 }
 
+.card-columns {
+  column-count: 4;
+}
+
 @media (max-width: 1380px) {
   .heading-text {
     font-size: 50px;
@@ -62,5 +66,9 @@
 
   .heading-div {
     flex-direction: column;
+  }
+
+  .card-columns {
+    column-count: 1;
   }
 }

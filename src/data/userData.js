@@ -1,10 +1,13 @@
 const { themes } = require('../theme-context');
+
 // ----- Landing Page ----- //
 const LANDING_DATA = {
   name: "Divyanshu Maurya",
   bgImage: "lead-bg.jpg",
+  resumeLink: "#",
   rotateTextItems: ["Developer", "Problem Solver", "Learner"],
 };
+
 
 // ----- Experience ------ //
 const EXPERIENCE_DATA = {
@@ -17,11 +20,8 @@ const EXPERIENCE_DATA = {
       employerName: "American Express",
       jobTitle: "Internship",
       timeline: "June 2020 - July 2020",
-      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                          Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut
-                          tortor nec nulla commodo malesuada sit amet vel lacus. Fusce
-                          eget efficitur libero. Morbi dapibus porta quam laoreet
-                          placerat.`,
+      description: `Worked on the integration of different microservices for transactions
+                    and a user interface using the OneApp framework.`,
     },
 
     // {
@@ -71,7 +71,12 @@ const EDUCATION_DATA = {
 
 
   certificates: [
-
+    {
+      title: "Getting Started with Go",
+      description: "University of California, Irvine",
+      image: "go_certi.jpg",
+      link: "https://coursera.org/share/9b990545979b1dfaf3435577fd399311",
+    },
   ]
 };
 
@@ -93,6 +98,26 @@ const PROJECT_DATA = {
       name: "QuizApp",
       description: "A java application where teachers can host quiz(s) and students can attempt, check instant marks, send feedback",
       footnote: "Java | MongoDB | FXML",
+    },
+    {
+      image: "",
+      name: "CryptoMomo",
+      description: "A blockchain cryptocurrency mimicing the workings of bitcoin.",
+      footnote: "JavaScript | Blockchain | ReactJS | Express",
+    },
+    {
+      image: "",
+      name: "Node-WikiQuote-Api",
+      description: `A npm package for interacting with wikiquotes api and
+                     fetching 'random quotes' or any specific person's quote`,
+      footnote: "JavaScript | npm ",
+    },
+    {
+      image: "",
+      name: "Guess My Age",
+      description: `An Alex Skill Kit available on Alexa Skill store, an interative game in which Alexa
+      tries to guess your age through a simple mathematics. :p`,
+      footnote: "JavaScript | AWS | Alexa-sdk",
     },
   ],
 };
@@ -122,6 +147,18 @@ const SKILLS_DATA = {
       name:"Python",
       image:"python.png",
     },
+    {
+      name:"Go",
+      image:"go.png",
+    },
+    {
+      name:"ReactJs",
+      image:"reactjs.png",
+    },
+    {
+      name:"MongoDB",
+      image:"mongodb.jpg",
+    },
   ],
 };
 
@@ -132,25 +169,37 @@ const CONTACT_DATA = {
   socialLinks: [
     {
       icon: "github",
-      link: "#",
+      link: "https://github.com/divyanshu1610",
     },
     {
       icon: "linkedin",
-      link: "#",
+      link: "https://www.linkedin.com/in/divyanshu-maurya-135a1714a/",
     },
     {
       icon: "google",
-      link: "#",
+      link: "mailto:divyanshu1610@gmail.com",
     },
     {
       icon: "twitter",
-      link: "#",
+      link: "https://twitter.com/div1610",
     },
   ],
 };
 
-const SELECTED_THEME = themes.orangeTheme;
+
+
+ /**
+  * THEMES
+  *  purpleTheme
+  *  orangeTheme
+  *  pinkTheme
+  *  blueTheme
+  */
+const SELECTED_THEME = themes.purpleTheme;
+
 const REPO_NAME = 'my-devportfolio';
+
+
 
 module.exports = {
   LANDING_DATA,

@@ -1,68 +1,106 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center"> Software Developer Portfolio </h1> 
 
-## Available Scripts
+<p align="center">
+  <a href="http://hits.dwyl.com/divyanshu1610/my-devportfolio"><img alt="HitCounts" src="http://hits.dwyl.com/divyanshu1610/my-devportfolio.svg" /></a>
+  <a href="https://nodejs.org/en/blog/release/v12.13.0/"><img alt="NodeJS" src="https://img.shields.io/badge/node-12.14.1-important?style=flat-square" /></a>
+  <a href="https://www.npmjs.com/package/npm/v/6.13.4"><img alt="NPM" src="https://img.shields.io/badge/npm-6.13.7-blueviolet?style=flat-square" /></a>
+  <a href="https://reactjs.org/"><img alt="Made With React" src="https://img.shields.io/badge/made%20with-react-61DAFB?style=flat-square" /></a>
+  <a href="http://badges.mit-license.org/"><img alt="License" src="http://img.shields.io/:license-mit-blue.svg?style=flat-square?style=flat-square" /></a>
+</p>
 
-In the project directory, you can run:
+<p align="center"> 
+    <a href="https://divyanshu1610.github.io/my-devportfolio/" target="_blank">
+    <img src="images/mydevportfolioHome.jpg"></img>
+  </a>
+</p>
 
-### `yarn start`
+:star: Star us on GitHub — it helps!
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+To view a live example, **[click here](https://divyanshu1610.github.io/my-devportfolio/)**
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+# Clone And Use 📋
 
-### `yarn test`
+- The website is completely built on `react-js` framework of `javascript` and that's why we need `nodejs` and `npm` installed.
+- While installing `nodejs` and `npm`, try to install versions which are equal or greater than the versions mentioned in badges above.
+- In case you want to help developing it or simply saving it, you can fork the repository just by clicking the button on the top-right corner of this page.
+- After the successful installation of `nodejs` and `npm`, clone the repository into your local system using below command:
+  - ```python
+     git clone https://github.com/divyanshu1610/my-devportfolio.git
+    ```
+  - This will clone the whole repository in your system.
+- To download required dependencies to your system, navigate to the directory where the cloned repository resides and execute following command:
+  - ```python
+    npm install
+    ```
+- Now, the project is ready to use.
+- You can check it using `npm start`, it will open the website locally on your browser.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Customize it to make your own portfolio ✏️
 
-### `yarn build`
+In this project, there are basically 2 things that you need to change to customize this to anyone else's portfolio: 
+1. **package.json**
+2. **Personal Information**
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### package.json
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Open this file, which is in the main cloned directory, choose any "name" and change "homepage " to `https://<your-github-username>.github.io/<your-repository-name>`.<br>
+Do not forget the `https://`, otherwise fonts will not load.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Personal Information
 
-### `yarn eject`
+You will find `src/data/userData.js` file which contains the complete information about the user. The file looks something like below:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
+// ----- Landing Page ----- //
+const LANDING_DATA = {
+    ...
+}
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+// ----- Experience ------ //
+const EXPERIENCE_DATA = {
+    ...
+}
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+...
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+You can change the personal information, experience, education, projects, certifications, contact information etc. in `src/data/userData.js` to directly reflect them in portfolio website.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Choose Theme 🌈
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- You can take a look at bottom of `src/data/userData.js` file where all available themes are mentioned.
+- At the bottom of this file you will see the below code:
 
-### Code Splitting
+  <img src="images/mydevportfolioTheme.jpg"/>
+- That's it. You just need to change the theme name and the code will take care of everything else.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+- Set the 'REPO_NAME' to the your repository name in which project will be deployed. See **Deployment** section.
 
-### Analyzing the Bundle Size
+  Run `npm start` to check if everything is ok.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-### Making a Progressive Web App
+# Deployment 📦
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+- Once you are done with your setup and have successfully completed all steps above, you need to put your website online!
+- I recommend using [Github Pages](https://create-react-app.dev/docs/deployment/#github-pages) to achieve this the EASIEST WAY.
 
-### Advanced Configuration
+- Create a repository in github.
+> Note : REPO_NAME should match the repository name in which project will reside.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+- Add the repository as your remote.
 
-### Deployment
+- Run `npm run deploy` to build and create a branch called `gh-pages`. It will push the `build` files to that branch.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+Now, your website is successfully deployed and you can visit it at `<your-github-username>.github.io/<your-repository-name>`.  
+If you are stuck somewhere and want to observe the deployment process in depth, refer any deployment guides on YouTube. 
+  
 
-### `yarn build` fails to minify
+# License 📄
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+This project is licensed under the MIT License - see the [LICENSE.md](./LICENSE) file for details.
+
+# References 👏🏻
+
+
+- Some Design and Implementation Ideas are taken from [Master Portfolio Project](https://github.com/ashutosh1919/masterPortfolio) and [Dev Portfolio](https://github.com/RyanFitzgerald/devportfolio)

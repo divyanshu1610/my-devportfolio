@@ -6,7 +6,7 @@ import ProjectImg from "./ProjectImg";
 
 import { ThemeContext } from "../../theme-context";
 
-import { PROJECT_DATA } from "../../data/userData";
+import { PROJECT_DATA, REPO_NAME } from "../../data/userData";
 
 import "./Project.css";
 
@@ -20,7 +20,7 @@ const Project = () => {
       <Fade key={name} duration={2000} bottom>
         <div className="card">
           {image && (
-            <img src={`/assets/${image}`} className="card-img-top" alt="..." />
+            <img src={`${REPO_NAME}/assets/${image}`} className="card-img-top" alt="..." />
           )}
           <div className="card-body">
             <h5  style={{color: theme.dark}} className="card-title">{name}</h5>

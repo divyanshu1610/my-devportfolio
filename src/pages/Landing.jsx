@@ -6,7 +6,7 @@ import { LANDING_DATA, REPO_NAME } from '../data/userData';
 import  { ThemeContext } from '../theme-context';
 
 const Landing = () => {
-  const { name, rotateTextItems, bgImage } = LANDING_DATA;
+  const { name, rotateTextItems, bgImage, resumeLink } = LANDING_DATA;
   const { theme } = useContext(ThemeContext);
 
   const bgImgPath = `url(/${REPO_NAME}/assets/${bgImage})`;
@@ -17,7 +17,7 @@ const Landing = () => {
         <div id="lead-content">
           <h1>{name}</h1>
           <h2 style={{color: theme.imageHighlight, marginTop: '1rem'}}><ReactRotatingText items={rotateTextItems} /></h2>
-          <a href="#" style={{}} className="btn-rounded-white">
+          <a href={resumeLink} className="btn-rounded-white">
             Download Resume
           </a>
         </div>
