@@ -18,12 +18,17 @@ const EXPERIENCE_DATA = {
   experiences: [
     {
       employerName: "American Express",
-      jobTitle: "Internship",
-      timeline: "June 2020 - July 2020",
+      jobTitle: "Software Development Engineer II",
+      timeline: "August 2021 - Present",
+      description: "",
+    },
+    {
+      employerName: "American Express",
+      jobTitle: "Technology Intern",
+      timeline: "May 2020 - July 2020",
       description: `Worked on the integration of different microservices for transactions
                     and a user interface using the OneApp framework.`,
-    },
-
+    }
     // {
     //   employerName: "American Express",
     //   jobTitle: "Internship",
@@ -49,8 +54,8 @@ const EDUCATION_DATA = {
     {
       instituteName: "Motilal Nehru National Institute of Technology Allahabad",
       location: "Prayagraj",
-      duration: "2017-Present",
-      course: "Bachelor Of Technology in Computer Science",
+      duration: "2017-2021",
+      course: "Bachelor Of Technology in Computer Science and Engineering",
       description: null,
     },
     {
@@ -144,7 +149,7 @@ const SKILLS_DATA = {
       image:"nodejs.png",
     },
     {
-      name:"Python",
+      name:"Spring, SpringBoot",
       image:"python.png",
     },
     {
@@ -159,6 +164,22 @@ const SKILLS_DATA = {
       name:"MongoDB",
       image:"mongodb.jpg",
     },
+    {
+      name:"Cassandra",
+      image:"cassandra.png",
+    },
+    {
+      name:"Apache Ignite",
+      image:"ignite.png",
+    },
+    {
+      name:"Apache Spark",
+      image:"spark.png",
+    },
+    {
+      name:"Apache Camel",
+      image:"camel.png",
+    }
   ],
 };
 
@@ -173,7 +194,7 @@ const CONTACT_DATA = {
     },
     {
       icon: "linkedin",
-      link: "https://www.linkedin.com/in/divyanshu-maurya-135a1714a/",
+      link: "https://www.linkedin.com/in/divyanshu1610",
     },
     {
       icon: "google",

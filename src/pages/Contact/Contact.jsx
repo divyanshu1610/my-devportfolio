@@ -52,7 +52,7 @@ const Contact = () => {
                 className="contact-header-detail-text subTitle"
                 style={{ color: theme.secondaryText }}
               >
-                {subText || emoji("Drop a Hi 👋")}
+                {subText || "Drop a Hi 👋"}
               </p>
               {/* <SocialMedia /> */}
               <div className="social-media-div align-center">{links}</div>

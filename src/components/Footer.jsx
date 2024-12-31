@@ -14,7 +14,7 @@ const Footer = () => {
             <Fade bottom duration={1000} distance="5px">
               <div className="footer-div">
                 <p className="footer-text">
-                  {emoji("Made with ❤️ by Divyanshu Maurya")}
+                  {"Made with ❤️ by Divyanshu Maurya"}
                 </p>
               </div>
             </Fade>
